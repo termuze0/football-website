@@ -4,8 +4,8 @@ This static website allows users to search for information about football player
 
 Features:
 
-. User-friendly interface with an input field and search button.
-. Redirects to Wikipedia pages based on player names.
-. Responsive design to ensure compatibility with various devices.
+User-friendly interface with an input field and search button.
+Redirects to Wikipedia pages based on player names.
+Responsive design to ensure compatibility with various devices.
 Feel free to explore and contribute!
 
