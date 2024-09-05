@@ -64,10 +64,10 @@ h1 {
 #dataContainer {
     margin-top: 30px;
     padding: 15px;
-    background-color: transparent;
-    border: 1px solid transparent;
+    background-color: transparent; /* Set to transparent */
+    border: 1px solid transparent; /* Remove the border */
     border-radius: 10px;
-    box-shadow: none;
+    box-shadow: none; /* Remove the shadow */
 }
 
 /* Responsive design adjustments */
