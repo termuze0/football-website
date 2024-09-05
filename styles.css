@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 20px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('download.png') no-repeat center center fixed;
+                url('download.jpeg') no-repeat center center fixed;
     background-size: cover;
     color: #f4f4f9;
 }
@@ -64,10 +64,10 @@ h1 {
 #dataContainer {
     margin-top: 30px;
     padding: 15px;
-    background-color: transparent; /* Set to transparent */
-    border: 1px solid transparent; /* Remove the border */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: none; /* Remove the shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive design adjustments */
