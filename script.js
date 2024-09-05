@@ -1,60 +1,35 @@
-const apiKey = '1d2871803fc437ad5423fd255dc3fcd3'; // Replace with your API key
-const apiUrl = 'https://v3.football.api-sports.io/players'; // Example for API-Football
-
-// Event listener to trigger the search as the user types
-document.getElementById('playerName').addEventListener('input', function () {
-    const input = this.value.trim().toLowerCase();
-
-    if (input.length >= 2) { // Start fetching after 2 characters
-        fetchPlayers(input);
-    } else {
-        // Clear suggestions if input is less than 2 characters
-        document.getElementById('suggestions').innerHTML = '';
-    }
-});
-
+// Mock function to simulate API response
 function fetchPlayers(query) {
     const suggestionsList = document.getElementById('suggestions');
 
     // Clear previous suggestions
     suggestionsList.innerHTML = '';
 
-    // Fetch player data from the API
-    fetch(`${apiUrl}?search=${query}`, {
-        method: 'GET',
-        headers: {
-            'x-apisports-key': apiKey,
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Extract player names from the API response
-        const players = data.response;
+    // Dummy players data for testing
+    const players = [
+        { player: { name: "Lionel Messi" } },
+        { player: { name: "Cristiano Ronaldo" } },
+        { player: { name: "Neymar Jr" } },
+        { player: { name: "Kylian Mbappe" } },
+        { player: { name: "Zlatan Ibrahimović" } }
+    ];
 
-        if (players.length > 0) {
-            players.forEach(player => {
-                const option = document.createElement('option');
-                option.value = `${player.player.name}`;
-                suggestionsList.appendChild(option);
-            });
-        }
-    })
-    .catch(error => console.error('Error fetching players:', error));
-}
+    // Simulate matching players based on query
+    const filteredPlayers = players.filter(player => 
+        player.player.name.toLowerCase().includes(query)
+    );
 
-// Function to search the player on Wikipedia
-function searchPlayer() {
-    const playerName = document.getElementById('playerName').value.trim().toLowerCase();
-    
-    if (playerName) {
-        const formattedName = playerName.replace(/\s+/g, '_');
-        const wikipediaUrl = `https://en.wikipedia.org/wiki/${formattedName}`;
-        window.location.href = wikipediaUrl;
+    // Populate suggestions
+    if (filteredPlayers.length > 0) {
+        filteredPlayers.forEach(player => {
+            const option = document.createElement('option');
+            option.value = `${player.player.name}`;
+            suggestionsList.appendChild(option);
+        });
     } else {
-        alert('Please enter a player name.');
+        // If no players are found, show a message
+        const option = document.createElement('option');
+        option.value = "No players found";
+        suggestionsList.appendChild(option);
     }
 }
-
-// Event listeners for button click and "Enter" key press
-document.getElementById('fetchButton').addEventListener('click', searchPlayer);
-document.getElementById('playerName').addEvent
