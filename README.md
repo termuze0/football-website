@@ -1,6 +1,6 @@
 # Football Players Information
 - FIRST VISIT THE WEBSITE : https://partthiv.github.io/football-website/
-- I MADE THIS DEPENDING ON CHATGPT WITH 0 KNOWLEDGE OF HTML,CSS,JAVASCRIPT.
+- I MADE THIS DEPENDING ON CHATGPT WITH 0 KNOWLEDGE OF HTML,CSS,JAVASCRIPT.I just want to know whether it is possible or not.
 - This static website lets users search for football players and redirects to their Wikipedia pages. It features a clean, responsive design with a football-themed background. Built with HTML, CSS, and JavaScript, it showcases basic web development skills and external resource integration.
 
 **Features:**
